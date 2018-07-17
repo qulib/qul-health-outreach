@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import PostIcons from "../components/PostIcons"
 import Layout from "../layouts"
 
 import { rhythm } from "../utils/typography"
@@ -12,7 +11,6 @@ class PageTemplate extends Component {
     return (
       <Layout>
         <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-        <PostIcons node={currentPage} css={{ marginBottom: rhythm(1 / 2) }} />
         <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
       </Layout>
     )

@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import ClockIcon from "react-icons/lib/fa/clock-o"
 
 import Layout from "../layouts"
-import PostIcons from "../components/PostIcons"
 
 import { rhythm } from "../utils/typography"
 
@@ -40,7 +39,6 @@ class Home extends Component {
               <h3>{node.title}</h3>
             </Link>
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            <PostIcons node={node} />
           </div>
         ))}
       </Layout>
@@ -70,7 +68,6 @@ export const pageQuery = graphql`
           title
           excerpt
           slug
-          ...PostIcons
         }
       }
     }
