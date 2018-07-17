@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import ClockIcon from "react-icons/lib/fa/clock-o"
-
-import Layout from "../layouts"
-
+import Layout from "../components/layout"
 import { rhythm } from "../utils/typography"
 
 class Home extends Component {

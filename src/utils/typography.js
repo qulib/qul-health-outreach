@@ -1,19 +1,20 @@
 import Typography from "typography"
-import wordpress2013 from "typography-theme-wordpress-2013"
 
-wordpress2013.headerLineHeight = 1.1
-wordpress2013.overrideThemeStyles = () => {
-  return {
-    a: {
-      color: `rgb(60,99,243)`,
+const typography = new Typography({
+  baseFontSize: "18px",
+  baseLineHeight: 1.5,
+  googleFonts: [
+    {
+      name: 'Open Sans Pro',
+      styles: ['300', '400', '400i', '700'],
     },
-    h1: {
-      lineHeight: 1,
-    },
-  }
-}
-
-const typography = new Typography(wordpress2013)
+  ],
+  headerFontFamily: ["Open Sans", "sans-serif"],
+  bodyFontFamily: ["Open Sans", "sans-serif"],
+  headerWeight: '300',
+  bodyWeight: 400,
+  boldWeight: 700,
+});
 
 export const { rhythm, scale } = typography
 export default typography
