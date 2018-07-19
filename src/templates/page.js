@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 
 class PageTemplate extends Component {
   render() {
