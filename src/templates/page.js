@@ -1,17 +1,15 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-// import { rhythm } from "../utils/typography"
 
 class PageTemplate extends Component {
   render() {
     const currentPage = this.props.data.wordpressPage
 
     return (
-      <Layout>
+      <div>
         <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
         <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
-      </Layout>
+      </div>
     )
   }
 }

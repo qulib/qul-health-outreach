@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
-import ClockIcon from "react-icons/lib/fa/clock-o"
-import Layout from "../components/layout"
+import Header from "../components/header"
 import { rhythm } from "../utils/typography"
 
 class Home extends Component {
@@ -9,28 +8,8 @@ class Home extends Component {
     const data = this.props.data
 
     return (
-      <Layout>
-        <div css={{ marginBottom: rhythm(1) }}>
-          <h1>Pages</h1>
-          {data.allWordpressPage.edges.map(({ node }) => (
-            <div key={node.slug}>
-              <Link to={node.slug} css={{ textDecoration: `none` }}>
-                <h3>{node.title}</h3>
-              </Link>
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <span>
-                <ClockIcon
-                  size={14}
-                  css={{ position: `relative`, bottom: 1 }}
-                />
-                {` `}
-                {node.date}
-              </span>
-            </div>
-          ))}
-        </div>
-        <hr />
-        <h1>Posts</h1>
+      <div>
+        <Header siteTitle={data.site.siteMetadata.title}/>
         {data.allWordpressPost.edges.map(({ node }) => (
           <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
             <Link to={node.slug} css={{ textDecoration: `none` }}>
@@ -39,7 +18,7 @@ class Home extends Component {
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         ))}
-      </Layout>
+      </div>
     )
   }
 }
@@ -48,26 +27,26 @@ export default Home
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-  query {
-    allWordpressPage {
-      edges {
-        node {
-          id
-          title
-          excerpt
-          slug
-          date(formatString: "MMMM DD, YYYY")
-        }
-      }
-    }
-    allWordpressPost(sort: { fields: [date] }) {
-      edges {
-        node {
-          title
-          excerpt
-          slug
+{
+  allWordpressPost(sort: {fields: [date]}) {
+    edges {
+      node {
+        id
+        title
+        slug
+        excerpt
+        featured_media {
+          source_url
+          alt_text
         }
       }
     }
   }
+  site {
+    siteMetadata {
+      title
+      subtitle
+    }
+  }
+}
 `
