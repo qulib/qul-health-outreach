@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `A sample site using gatsby-source-wordpress`,
-    subtitle: `Data fetched from a site hosted on wordpress.com`,
+    title: `Site Title Goes Here`,
+    subtitle: `Site subtitle goes here`,
   },
   plugins: [
     {
@@ -15,7 +15,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-glamor`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
