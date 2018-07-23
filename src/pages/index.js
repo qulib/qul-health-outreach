@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import Header from "../components/header"
-import { rhythm } from "../utils/typography"
+import "../styles/main.scss"
 
 class Home extends Component {
   render() {
@@ -11,7 +11,7 @@ class Home extends Component {
       <div>
         <Header siteTitle={data.site.siteMetadata.title}/>
         {data.allWordpressPost.edges.map(({ node }) => (
-          <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
+          <div key={node.slug}>
             <Link to={node.slug} css={{ textDecoration: `none` }}>
               <h3>{node.title}</h3>
             </Link>

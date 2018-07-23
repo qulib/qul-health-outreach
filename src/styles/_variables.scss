@@ -1,0 +1,39 @@
+/* primary palette */
+$colour-primary-blue: #00305e;
+$colour-primary-red: #b61137;
+$colour-primary-gold: #fba900;
+$colour-primary-white: #ffffff;
+$colour-primary-black: #000000;
+
+/* secondary palette */
+$colour-secondary-blue: #406486;
+$colour-secondary-dark-gray: #666666;
+$colour-secondary-light-gray: #8c8c8c;
+$colour-secondary-yellow: #fcc34c;
+
+/* backgrounds palette */
+$colour-backgrounds-medium-gray: #a7a7a7;
+$colour-backgrounds-light-gray: #d9d9d9;
+$colour-backgrounds-dark-yellow: $colour-secondary-yellow;
+$colour-backgrounds-medium-yellow: #fdd073;
+$colour-backgrounds-light-yellow: #fdda91;
+$colour-backgrounds-medium-blue: #e5eaef;
+$colour-backgrounds-light-blue: #d9e0e7;
+$colour-backgrounds-dark-red: #650000;
+$colour-backgrounds-medium-red: #880000;
+
+/* text pallete */
+$colour-text-main: #3c3c3c;
+$colour-text-white: $colour-primary-white;
+$colour-text-blue: $colour-primary-blue;
+$colour-text-link: #1d70ad; /* not listed in style guide */
+$colour-text-link-hover: $colour-primary-red;
+$colour-text-link-visited: #803580;
+
+/* buttons */
+$colour-button-primary: $colour-primary-blue;
+$colour-button-primary-hover: #00284f;
+$colour-button-red: $colour-primary-red;
+$colour-button-red-hover: $colour-backgrounds-dark-red;
+$colour-button-gray: $colour-secondary-light-gray;
+$colour-button-gary-hover: $colour-secondary-dark-gray;
