@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Site Title Goes Here`,
-    subtitle: `Site subtitle goes here`,
+    title: `Site Title`,
+    subtitle: `Site subtitle`,
   },
   plugins: [
     {

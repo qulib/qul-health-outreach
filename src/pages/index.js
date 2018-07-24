@@ -1,15 +1,14 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
-import Header from "../components/header"
-import "../styles/main.scss"
+
+import Layout from "../components/layout"
 
 class Home extends Component {
   render() {
     const data = this.props.data
 
     return (
-      <div>
-        <Header siteTitle={data.site.siteMetadata.title}/>
+      <Layout siteTitle={data.site.siteMetadata.title} siteSubtitle={data.site.siteMetadata.subtitle}>
         {data.allWordpressPost.edges.map(({ node }) => (
           <div key={node.slug}>
             <Link to={node.slug} css={{ textDecoration: `none` }}>
@@ -18,7 +17,7 @@ class Home extends Component {
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         ))}
-      </div>
+      </Layout>
     )
   }
 }

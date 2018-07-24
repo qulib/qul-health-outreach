@@ -1,13 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteSubtitle }) => (
   <header id="header">
-    <h1>
-      <Link to="/">
-        {siteTitle}
-      </Link>
-    </h1>
+    <Link to="/">
+      <span className="site-title">{siteTitle}</span>
+      <span className="site-subtitle">{siteSubtitle}</span>
+    </Link>
   </header>
 )
 
