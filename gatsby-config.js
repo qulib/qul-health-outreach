@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Site Title`,
-    subtitle: `Site subtitle`,
-  },
   plugins: [
     {
       resolve: `gatsby-source-wordpress`,

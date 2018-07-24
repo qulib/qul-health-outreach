@@ -8,7 +8,7 @@ class Home extends Component {
     const data = this.props.data
 
     return (
-      <Layout siteTitle={data.site.siteMetadata.title} siteSubtitle={data.site.siteMetadata.subtitle}>
+      <Layout>
         {data.allWordpressPost.edges.map(({ node }) => (
           <div key={node.slug}>
             <Link to={node.slug} css={{ textDecoration: `none` }}>
@@ -39,12 +39,6 @@ export const pageQuery = graphql`
           alt_text
         }
       }
-    }
-  }
-  site {
-    siteMetadata {
-      title
-      subtitle
     }
   }
 }

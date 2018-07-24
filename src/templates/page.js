@@ -23,12 +23,5 @@ export const pageQuery = graphql`
       content
       date(formatString: "MMMM DD, YYYY")
     }
-    site {
-      id
-      siteMetadata {
-        title
-        subtitle
-      }
-    }
   }
 `
