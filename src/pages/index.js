@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Card from "../components/card"
 
 class Home extends Component {
   render() {
@@ -11,11 +12,23 @@ class Home extends Component {
       <Layout>
         {data.allWordpressPost.edges.map(({ node }) => (
           <div key={node.slug}>
-            <Link to={node.slug} css={{ textDecoration: `none` }}>
-              <h3>{node.title}</h3>
-            </Link>
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <Card 
+              image={node.featured_media.source_url}
+              image_alt={node.featured_media.alt_text}
+              title={node.title} 
+              content={node.content} 
+              link={node.acf.link}
+            />
           </div>
+
+          // <div key={node.slug}>
+          //   <Link to={node.slug} css={{ textDecoration: `none` }}>
+          //     <h3>{node.title}</h3>
+          //   </Link>
+          //   <div dangerouslySetInnerHTML={{ __html: node.content }} />
+          // </div>
+          // 
+          
         ))}
       </Layout>
     )
@@ -30,13 +43,15 @@ export const pageQuery = graphql`
   allWordpressPost(sort: {fields: [date]}) {
     edges {
       node {
-        id
         title
         slug
-        excerpt
+        content
         featured_media {
           source_url
           alt_text
+        }
+        acf {
+          link
         }
       }
     }

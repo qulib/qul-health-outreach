@@ -1,13 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
 
-const Card = ({ siteTitle, siteSubtitle }) => (
-  <header id="header">
-    <Link to="/">
-      <span className="site-title">{siteTitle}</span>
-      <span className="site-subtitle">{siteSubtitle}</span>
-    </Link>
-  </header>
+const Card = ({ image, image_alt, title, content, link }) => (
+  <article class="card">
+    <a href={link}>
+      <figure class="card-thumbnail">
+        <img src={image} alt={image_alt}/>
+      </figure>
+      <main>
+        <h3 class="card-title">{title}</h3>
+        <p class="card-content" dangerouslySetInnerHTML={{ __html: content }} />
+      </main>
+    </a>
+  </article>
 )
 
 export default Card
