@@ -1,6 +1,5 @@
 {
   "name": "qul-gatsby-wordpress",
-  "private": true,
   "description": "QUL example site using the Wordpress source plugin",
   "version": "1.0.0",
   "author": "Paul Clifford",
@@ -10,7 +9,6 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "^2.0.0-beta.6",
     "gatsby-plugin-sharp": "next",
-    "gatsby-plugin-typography": "next",
     "gatsby-source-wordpress": "next",
     "gatsby-transformer-sharp": "next",
     "glamor": "^2.20.40",
@@ -18,14 +16,8 @@
     "node-sass": "^4.9.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^2.2.7",
-    "react-typography": "^0.16.13",
-    "typography": "^0.16.16"
+    "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
