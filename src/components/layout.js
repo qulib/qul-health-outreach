@@ -8,9 +8,9 @@ const siteTitle = "My site is cool";
 const siteSubtitle = "yep";
 
 export default ({ children }) => (
-  <div id="content">
+  <div id="site">
     <Header siteTitle={siteTitle} siteSubtitle={siteSubtitle}/>
-    {children}
+    <div id="main">{children}</div>
     <Footer siteTitle={siteTitle}/>
   </div>
 )
