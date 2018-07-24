@@ -10,8 +10,9 @@ class Home extends Component {
 
     return (
       <Layout>
+        <div class="cards">
         {data.allWordpressPost.edges.map(({ node }) => (
-          <div key={node.slug}>
+
             <Card 
               image={node.featured_media.source_url}
               image_alt={node.featured_media.alt_text}
@@ -19,8 +20,9 @@ class Home extends Component {
               content={node.content} 
               link={node.acf.link}
             />
-          </div>
 
+
+          // do this way to link to the WP post page created by Gatsby
           // <div key={node.slug}>
           //   <Link to={node.slug} css={{ textDecoration: `none` }}>
           //     <h3>{node.title}</h3>
@@ -30,6 +32,7 @@ class Home extends Component {
           // 
           
         ))}
+        </div>
       </Layout>
     )
   }

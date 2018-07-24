@@ -4,8 +4,8 @@ import Header from "./header"
 import Footer from "./footer"
 import "../styles/style.scss"
 
-const siteTitle = "Bracken Health Outreach Partners";
-const siteSubtitle = "A Partnership with Bracken Health Sciences Library";
+const siteTitle = "Site title goes here";
+const siteSubtitle = "Subtitle goes here";
 
 export default ({ children }) => (
   <div id="site">

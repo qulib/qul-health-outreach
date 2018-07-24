@@ -1,6 +1,6 @@
 #site-header {
   padding: 2rem;
-  background-color: $colour-backgrounds-light-gray;
+  // border-bottom: 1px solid $colour-backgrounds-light-gray;
   a {
     color: $colour-primary-blue;
     text-decoration: none;
@@ -13,7 +13,6 @@
     font-weight: 700;
   }
   .site-subtitle {
-    // color: white;
     display: block;
     font-size: smaller;
   }
