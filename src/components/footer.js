@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import QULlogo from "../images/qul-logo-long.png";
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
   <footer id="site-footer">
-    <Link to="/">
-      <span>{siteTitle}</span>
-    </Link>
+    <a href="https://library.queensu.ca">
+      <img id="qul-logo" src={QULlogo} alt="Queen's University Library"/>
+    </a>
   </footer>
 )
 
