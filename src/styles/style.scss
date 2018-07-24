@@ -2,6 +2,7 @@
 @import "variables";
 @import "header";
 @import "main";
+@import "footer";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -11,6 +12,6 @@ body {
 
 #content {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 1100px;
   padding: 1.25rem 1rem;
 }
