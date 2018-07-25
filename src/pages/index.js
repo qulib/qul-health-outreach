@@ -14,7 +14,7 @@ class Home extends Component {
         {data.allWordpressPost.edges.map(({ node }) => (
 
             <Card 
-              image={node.featured_media.source_url}
+              image={node.featured_media.localFile.childImageSharp.resize.src}
               image_alt={node.featured_media.alt_text}
               title={node.title} 
               content={node.content} 
@@ -50,8 +50,14 @@ export const pageQuery = graphql`
         slug
         content
         featured_media {
-          source_url
           alt_text
+          localFile {
+            childImageSharp {
+              resize {
+                src
+              }
+            }
+          }
         }
         acf {
           link

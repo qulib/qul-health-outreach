@@ -1,6 +1,7 @@
 .card {
   background-color: $colour-backgrounds-light-blue;
   margin: 1rem;
+  max-width: 400px;
   a {
     text-decoration: none;
     color: $colour-text-main;
