@@ -1,4 +1,5 @@
 import React from "react"
+// import Img from "gatsby-image"
 
 const Card = ({ image, image_alt, title, content, link }) => (
   <article class="card">
@@ -8,7 +9,7 @@ const Card = ({ image, image_alt, title, content, link }) => (
       </figure>
       <main>
         <h3 class="card-title">{title}</h3>
-        <p class="card-content" dangerouslySetInnerHTML={{ __html: content }} />
+        <div class="card-content" dangerouslySetInnerHTML={{ __html: content }} />
       </main>
     </a>
   </article>
