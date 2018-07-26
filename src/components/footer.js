@@ -6,7 +6,7 @@ const Footer = () => (
     <a href="https://library.queensu.ca">
       <img id="qul-logo" src={QULlogo} alt="Queen's University Library"/>
     </a>
-    <aside class="site-contact">
+    <aside className="site-contact">
       <h3>Contact Us</h3>
       <p>(613) 234-1234</p>
     </aside>

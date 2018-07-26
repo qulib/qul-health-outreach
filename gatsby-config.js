@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/new-design`,
+  // pathPrefix: `/new-design`,
   plugins: [
     {
       resolve: `gatsby-source-wordpress`,
