@@ -33,7 +33,7 @@ export default Home
 // Set here the ID of the home page.
 export const pageQuery = graphql`
 {
-  allWordpressPost(sort: {fields: [date]}, filter: {categories: {slug: {eq: "home"}}}) {
+  allWordpressPost(sort: {fields: [date]}, filter: {categories: {slug: {eq: "nhh"}}}) {
     edges {
       node {
         title

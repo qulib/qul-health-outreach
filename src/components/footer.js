@@ -7,8 +7,8 @@ const Footer = () => (
       <img id="qul-logo" src={QULlogo} alt="Queen's University Library"/>
     </a>
     <aside className="site-contact">
-      <h3>Contact Us</h3>
-      <p>(613) 234-1234</p>
+      <p>Phone: (877) 209-5641</p>
+      <p>Email: <a href="mailto:bracken.library@queensu.ca">bracken.library@queensu.ca</a></p>
     </aside>
   </footer>
 )
