@@ -1,5 +1,5 @@
 module.exports = {
-  // pathPrefix: `/new-design`,
+  pathPrefix: `/health-outreach`,
   plugins: [
     {
       resolve: `gatsby-source-wordpress`,
