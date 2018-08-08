@@ -4,8 +4,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `qul.wordpress`,
-        protocol: `http`,
+        baseUrl: `health-outreach.library.queensu.ca`,
+        protocol: `https`,
         hostingWPCOM: false,
         useACF: true,
       },

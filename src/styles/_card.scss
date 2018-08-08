@@ -1,5 +1,6 @@
 .card {
   background-color: $colour-backgrounds-light-blue;
+  border: 1px solid $colour-backgrounds-light-blue;
   margin: 1rem;
   max-width: 400px;
   a {
@@ -8,7 +9,6 @@
   }
   img {
     max-width: 100%;
-    // max-height: 300px;
   }
   main {
     padding: 1rem;
@@ -17,9 +17,6 @@
       margin: 0;
       font-weight: 300;
     }
-    // .card-content {
-
-    // }
   }
   &:hover {
     background-color: $colour-backgrounds-medium-blue;
