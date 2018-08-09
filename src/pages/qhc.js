@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import ExternalCard from "../components/external-card"
+import Card from "../components/card"
 
 class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ class Home extends Component {
         <div className="cards">
           {data.allWordpressPost.edges.map(({ node }) => (
             <div key={node.slug}>
-              <ExternalCard node = {node} />
+              <Card node = {node} />
             </div>
           ))}
         </div>
@@ -30,26 +30,7 @@ export const pageQuery = graphql`
   allWordpressPost(sort: {fields: [date]}, filter: {categories: {slug: {eq: "qhc"}}}) {
     edges {
       node {
-        title
-        slug
-        content
-        featured_media {
-          alt_text
-          localFile {
-            childImageSharp {
-              resize(
-                width: 400
-                toFormat: PNG
-              ) {
-                src
-              }
-
-            }
-          }
-        }
-        acf {
-          link
-        }
+        ...CardData
       }
     }
   }

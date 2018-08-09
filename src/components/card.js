@@ -1,9 +1,11 @@
 import React from "react"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+// import { Link } from "gatsby-link"
 // import Img from "gatsby-image"
 
 const Card = ({ node }) => (
   <article className="card">
-    <a href={node.acf.link} title={node.title}>
+    <OutboundLink href={node.acf.link} title={node.title}>
       <figure className="card-thumbnail">
         <img src={node.featured_media.localFile.childImageSharp.resize.src} alt={node.featured_media.alt_text}/>
       </figure>
@@ -11,37 +13,32 @@ const Card = ({ node }) => (
         <h3 className="card-title">{node.title}</h3>
         <div className="card-content" dangerouslySetInnerHTML={{ __html: node.content }} />
       </main>
-    </a>
+    </OutboundLink>
   </article>
 )
 
-// export const cardData = graphql`
-// fragment CardData on Card { 
-//   edges {
-//     node {
-//       title
-//       slug
-//       content
-//       featured_media {
-//         alt_text
-//         localFile {
-//           childImageSharp {
-//             resize(
-//               width: 400
-//               toFormat: JPG
-//             ) {
-//               src
-//             }
-
-//           }
-//         }
-//       }
-//       acf {
-//         link
-//       }
-//     }
-//   }
-// }
-// `
-
 export default Card
+
+export const cardData = graphql`
+fragment CardData on wordpress__POST {
+  title      
+  slug
+  content
+  acf {
+    link
+  }
+  featured_media {
+    alt_text
+    localFile {
+      childImageSharp {
+        resize(
+          width: 400
+          toFormat: PNG
+        ) {
+          src
+        }
+      }
+    }
+  }
+}
+`

@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
 
+
+
 class Home extends Component {
   render() {
     const data = this.props.data;
@@ -30,26 +32,7 @@ export const pageQuery = graphql`
   allWordpressPost(sort: {fields: [date]}, filter: {categories: {slug: {eq: "home"}}}) {
     edges {
       node {
-        title
-        slug
-        content
-        featured_media {
-          alt_text
-          localFile {
-            childImageSharp {
-              resize(
-                width: 400
-                toFormat: PNG
-              ) {
-                src
-              }
-
-            }
-          }
-        }
-        acf {
-          link
-        }
+        ...CardData
       }
     }
   }
