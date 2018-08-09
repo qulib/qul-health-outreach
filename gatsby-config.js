@@ -12,6 +12,13 @@ module.exports = {
         protocol: `https`,
         hostingWPCOM: false,
         useACF: true,
+        verboseOutput: false,
+        excludedRoutes: [
+          "/akismet/**",
+          "/jetpack/**",
+          "/wp/v2/jp_pay_order/**",
+          "/wp/v2/users/**"
+        ],
       },
     },
     {
@@ -43,7 +50,7 @@ module.exports = {
           opengraph: false,
           twitter: false,
           yandex: false,
-          windows: true
+          windows: true,
         }
       }
     },
