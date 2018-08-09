@@ -43,7 +43,7 @@ module.exports = {
           opengraph: false,
           twitter: false,
           yandex: false,
-          windows: false
+          windows: true
         }
       }
     }
