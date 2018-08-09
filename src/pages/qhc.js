@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Card from "../components/card"
+import ExternalCard from "../components/external-card"
 
 class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ class Home extends Component {
         <div className="cards">
           {data.allWordpressPost.edges.map(({ node }) => (
             <div key={node.slug}>
-              <Card node = {node} />
+              <ExternalCard node = {node} />
             </div>
           ))}
         </div>
