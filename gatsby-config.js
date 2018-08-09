@@ -1,6 +1,10 @@
 module.exports = {
   pathPrefix: `/health-outreach`,
   plugins: [
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
@@ -10,10 +14,6 @@ module.exports = {
         useACF: true,
       },
     },
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
@@ -46,6 +46,16 @@ module.exports = {
           windows: true
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-88346038-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+      },
+    },
   ],
 }
