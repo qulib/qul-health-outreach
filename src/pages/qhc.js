@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import { graphql } from "gatsby"
+import React, { Component } from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Card from "../components/card"
+import Layout from "../components/layout";
+import Card from "../components/card";
 
 class Home extends Component {
   render() {
@@ -13,26 +13,29 @@ class Home extends Component {
         <div className="cards">
           {data.allWordpressPost.edges.map(({ node }) => (
             <div key={node.slug}>
-              <Card node = {node} />
+              <Card node={node} />
             </div>
           ))}
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-{
-  allWordpressPost(sort: {fields: [date]}, filter: {categories: {slug: {eq: "qhc"}}}) {
-    edges {
-      node {
-        ...CardData
+  {
+    allWordpressPost(
+      sort: { fields: [date] }
+      filter: { categories: { slug: { eq: "qhc" } } }
+    ) {
+      edges {
+        node {
+          ...CardData
+        }
       }
     }
   }
-}
-`
+`;

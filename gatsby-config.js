@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: `/health-outreach`,
+  pathPrefix: `/health-outreach/`,
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -18,28 +18,28 @@ module.exports = {
           "/jetpack/**",
           "/wp/v2/jp_pay_order/**",
           "/wp/v2/users/**"
-        ],
-      },
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/images/qul-squares.png",
-  
+
         // WebApp Manifest Configuration
-        appName: 'Gatsby site',
+        appName: "Gatsby site",
         appDescription: null,
         developerName: null,
         developerURL: null,
-        dir: 'auto',
-        lang: 'en-US',
-        background: '#fff',
-        theme_color: '#fff',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
-  
+        dir: "auto",
+        lang: "en-US",
+        background: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/?homescreen=1",
+        version: "1.0",
+
         icons: {
           android: true,
           appleIcon: true,
@@ -50,7 +50,7 @@ module.exports = {
           opengraph: false,
           twitter: false,
           yandex: false,
-          windows: true,
+          windows: true
         }
       }
     },
@@ -60,9 +60,9 @@ module.exports = {
         trackingId: "UA-88346038-1",
         head: false,
         anonymize: true,
-        respectDNT: true,
+        respectDNT: true
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
-      },
-    },
-  ],
-}
+      }
+    }
+  ]
+};
