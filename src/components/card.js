@@ -1,6 +1,6 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import React from "react"
+import { graphql } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 // import { Link } from "gatsby-link"
 // import Img from "gatsby-image"
 
@@ -25,7 +25,7 @@ const Card = ({ node }) => (
       </main>
     </OutboundLink>
   </article>
-);
+)
 
 export default Card;
 
@@ -48,4 +48,4 @@ export const cardData = graphql`
       }
     }
   }
-`;
+`

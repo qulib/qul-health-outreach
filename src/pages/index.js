@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { graphql } from "gatsby";
+import React, { Component } from "react"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout";
-import Card from "../components/card";
+import Layout from "../components/layout"
+import Card from "../components/card"
 
 class Home extends Component {
   render() {
@@ -18,13 +18,12 @@ class Home extends Component {
           ))}
         </div>
       </Layout>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home
 
-// Set here the ID of the home page.
 export const pageQuery = graphql`
   {
     allWordpressPost(
@@ -38,4 +37,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

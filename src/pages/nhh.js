@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { graphql } from "gatsby";
+import React, { Component } from "react"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout";
-import Card from "../components/card";
+import Layout from "../components/layout"
+import Card from "../components/card"
 
 class Home extends Component {
   render() {
@@ -22,7 +22,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home
 
 export const pageQuery = graphql`
   {
@@ -37,4 +37,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

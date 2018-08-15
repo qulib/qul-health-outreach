@@ -60,9 +60,8 @@ module.exports = {
         trackingId: "UA-88346038-1",
         head: false,
         anonymize: true,
-        respectDNT: true
-        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        respectDNT: true 
       }
     }
   ]
-};
+}

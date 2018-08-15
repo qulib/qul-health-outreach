@@ -1,5 +1,5 @@
-import React from "react";
-import QULlogo from "../images/qul-logo-long.png";
+import React from "react"
+import QULlogo from "../images/qul-logo-long.png"
 
 const Footer = () => (
   <footer id="site-footer">
@@ -19,6 +19,6 @@ const Footer = () => (
       </p>
     </aside>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
