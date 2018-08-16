@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-// import { Link } from "gatsby-link"
-// import Img from "gatsby-image"
 
 const Card = ({ node }) => (
   <article className="card">
     <OutboundLink href={node.acf.link} title={node.title}>
       <figure className="card-thumbnail">
+
         <img
           src={
             // "/health-outreach" +
