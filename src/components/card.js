@@ -9,7 +9,6 @@ const Card = ({ node }) => (
 
         <img
           src={
-            // "/health-outreach" +
             node.featured_media.localFile.childImageSharp.resize.src
           }
           alt={node.featured_media.alt_text}
