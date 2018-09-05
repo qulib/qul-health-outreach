@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
 
-class Home extends Component {
+class QHC extends Component {
   render() {
     const data = this.props.data;
 
@@ -22,7 +22,7 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default QHC
 
 export const pageQuery = graphql`
   {
