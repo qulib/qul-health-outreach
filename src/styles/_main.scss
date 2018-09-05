@@ -4,6 +4,13 @@
   padding: 2rem;
 }
 
+// flex fallback for Microsoft browser
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// for real browsers
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
