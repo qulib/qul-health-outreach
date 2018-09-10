@@ -1,8 +1,10 @@
 # QUL Gatsby Wordpress
 
-A simple Gatsby + WordPress site to get up and running with this stuff. 
+A simple Gatsby + WordPress for the Health Outreach Partners website 
 
-For the WordPress piece, I'm using a locally hosted version on Docker using the URL qul.wordpress. This can be changed to any WordPress URL provided the REST API hasn't been turned off. 
+Uses CSS grid with flexbox fallback from Microsoft broswers
 
-I'm also using Advanced Custom Fields (ACF) with the ACF to REST API plugin to make that part work. 
+Also uses Advanced Custom Fields (ACF) with the ACF to REST API plugin.  
+
+Implements a web manifest for icons and offline support
 
