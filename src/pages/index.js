@@ -25,16 +25,13 @@ class Home extends Component {
 export default Home
 
 export const pageQuery = graphql`
-  {
-    allWordpressPost(
-      sort: { fields: [date] }
-      filter: { categories: { slug: { eq: "home" } } }
-    ) {
-      edges {
-        node {
-          ...CardData
-        }
+{
+  allWordpressPost(sort: {fields: [date]}, filter: {categories: {elemMatch: {slug: {eq: "home"}}}}) {
+    edges {
+      node {
+        ...CardData
       }
     }
   }
+}
 `

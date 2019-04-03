@@ -25,16 +25,13 @@ class NHH extends Component {
 export default NHH
 
 export const pageQuery = graphql`
-  {
-    allWordpressPost(
-      sort: { fields: [date] }
-      filter: { categories: { slug: { eq: "nhh" } } }
-    ) {
-      edges {
-        node {
-          ...CardData
-        }
+{
+  allWordpressPost(sort: {fields: [date]}, filter: {categories: {elemMatch: {slug: {eq: "nhh"}}}}) {
+    edges {
+      node {
+        ...CardData
       }
     }
   }
+}
 `

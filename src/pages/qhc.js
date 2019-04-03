@@ -25,16 +25,13 @@ class QHC extends Component {
 export default QHC
 
 export const pageQuery = graphql`
-  {
-    allWordpressPost(
-      sort: { fields: [date] }
-      filter: { categories: { slug: { eq: "qhc" } } }
-    ) {
-      edges {
-        node {
-          ...CardData
-        }
+{
+  allWordpressPost(sort: {fields: [date]}, filter: {categories: {elemMatch: {slug: {eq: "qhc"}}}}) {
+    edges {
+      node {
+        ...CardData
       }
     }
   }
+}
 `
