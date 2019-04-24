@@ -1,4 +1,4 @@
-# QUL Gatsby Wordpress
+# QUL Health Outreach
 
 A simple Gatsby + WordPress for the Health Outreach Partners website 
 
