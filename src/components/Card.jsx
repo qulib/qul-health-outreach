@@ -1,16 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Card = ({ node }) => (
   <article className="card">
     <OutboundLink href={node.acf.link} title={node.title}>
       <figure className="card-thumbnail">
-
         <img
-          src={
-            node.featured_media.localFile.childImageSharp.resize.src
-          }
+          src={node.featured_media.localFile.childImageSharp.resize.src}
           alt={node.featured_media.alt_text}
         />
       </figure>
@@ -25,7 +22,7 @@ const Card = ({ node }) => (
   </article>
 )
 
-export default Card;
+export default Card
 
 export const cardData = graphql`
   fragment CardData on wordpress__POST {
