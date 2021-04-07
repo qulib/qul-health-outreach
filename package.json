@@ -14,6 +14,7 @@
     "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-sharp": "^2.1.0",
     "gatsby-source-wordpress": "^3.0.62",
+    "gatsby-source-wordpress-experimental": "^7.0.6",
     "gatsby-transformer-sharp": "^2.1.19",
     "lodash": "^4.17.11",
     "node-sass": "^4.12.0",
@@ -33,8 +34,5 @@
     "build": "gatsby build",
     "start": "gatsby serve",
     "predeploy": "gatsby build --prefix-paths"
-  },
-  "devDependencies": {
-    "eslint": "^4.1.1"
   }
 }
